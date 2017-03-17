@@ -1,3 +1,48 @@
 <resources>
-    <string name="app_name">Gestor de partidos</string>
+    <!--
+        Los nombres de los string siguen el siguiente sistema:
+        ventanas: "v" seguido del nombre del string,    ej: vusuario
+        botones: "b" seguido del nombre del string,     ej: busuario
+        labels: "l" seguido del nombre del string,      ej: lusuario
+
+        No usar caracteres especiales o "ñ" para los nombres.
+
+        Motivo: Diferenciar facilmente el string que buscamos y poder tener un formato de texto diferente
+                para los botones y los labels. ej:
+
+                lusuario ==> Usuario:
+                busuario ==> USUARIO
+    -->
+
+    <!-- NOMBRE -->
+    <string name="app_name">Gestor de Partidos</string>
+
+    <!-- VENTANAS -->
+    <string name="vmain">Partidos Ekialde</string>
+    <string name="vlogin">Inicio de sesión</string>
+    <string name="vlista">Listado de partidos</string>
+    <string name="vanadir">Añadir partido</string>
+    <string name="vpartido">Información del partido</string>
+    <string name="vequipo">Equipos</string>
+    <string name="ventrenador">Entrenadores</string>
+
+    <!-- PRINCIPAL -->
+    <string name="binvitado">INVITADO</string>
+    <string name="busuario">USUARIO</string>
+
+    <!-- CAMPOS LOGIN -->
+    <string name="biniciar">INICIAR SESIÓN</string>
+    <string name="lusuario">Usuario:</string>
+    <string name="lcontrasena">Contraseña:</string>
+
+    <!-- AÑADIR PARTIDO -->
+    <string name="lequipo">Equipo:</string>
+    <string name="lhora">Hora:</string>
+    <string name="larbitro">Arbitro:</string>
+    <string name="lmesa">Mesa:</string>
+
+    <!-- EQUIPO/ENTRENADOR -->
+    <string name="banadir">AÑADIR</string>
+    <string name="beditar">EDITAR</string>
+    <string name="bborrar">BORRAR</string>
 </resources>
