@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 repositories {
     maven { url 'http://repo1.maven.org/maven2' }
-    jcenter{url "http://jcenter.bintray.com/"}
+    jcenter { url "http://jcenter.bintray.com/" }
 }
 
 android {
@@ -31,7 +31,9 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:24.2.1'
     androidTestCompile 'junit:junit:4.12'
 }
+
 
 
