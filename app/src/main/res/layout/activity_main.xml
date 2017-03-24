@@ -17,8 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/binvitado"
-        android:onClick="invitado"
-    />
+        android:onClick="invitado"/>
 
     <Button
         android:layout_width="wrap_content"
