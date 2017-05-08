@@ -55,6 +55,9 @@
         android:layout_toRightOf="@id/login_txtpassword"
         android:layout_marginTop="200px"
         android:textColor="@color/colorPrimary"
-        android:background="@drawable/borde_botones_blanco"/>
+        android:background="@drawable/borde_botones_blanco"
+        android:paddingLeft="100px"
+        android:paddingRight="100px"
+        android:textSize="18sp" />
 
 </RelativeLayout>
