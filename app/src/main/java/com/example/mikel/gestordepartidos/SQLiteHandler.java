@@ -1,4 +1,4 @@
-package info.androidhive.loginandregistration.helper;
+package com.example.mikel.gestordepartidos;
 
 import android.content.ContentValues;
 import android.content.Context;
