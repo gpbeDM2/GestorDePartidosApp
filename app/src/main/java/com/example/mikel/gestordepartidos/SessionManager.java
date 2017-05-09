@@ -1,10 +1,8 @@
-SessionManager.java
-        package info.androidhive.loginandregistration.helper;
+package com.example.mikel.gestordepartidos;
 
-        import android.content.Context;
-        import android.content.SharedPreferences;
-        import android.content.SharedPreferences.Editor;
-        import android.util.Log;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
 
 public class SessionManager {
     // LogCat tag
@@ -13,7 +11,7 @@ public class SessionManager {
     // Shared Preferences
     SharedPreferences pref;
 
-    Editor editor;
+    SharedPreferences.Editor editor;
     Context _context;
 
     // Shared pref mode
