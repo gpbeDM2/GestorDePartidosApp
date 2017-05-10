@@ -9,37 +9,32 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mikel.gestordepartidos.mostrar_partido"
-    android:background="@color/colorPrimary">
+    android:background="@drawable/fondo9">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ekialdea infantil B"
+        android:text="EJEMPLO"
         android:id="@+id/mostrar_partido_equipo1"
-        android:textColor="@android:color/background_light"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" - "
-        android:layout_toRightOf="@id/mostrar_partido_equipo1"
-        android:id="@+id/mostrar_partido_guion"
-        android:layout_marginLeft="30px"
-        android:layout_marginRight="30px"
-        android:textColor="@android:color/background_light"/>
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="72dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ekialdea infantil c"
-        android:layout_toRightOf="@id/mostrar_partido_guion"
-        android:id="@+id/mostrar_partido_equipo2"
-        android:textColor="@android:color/background_light"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mostrar_partido_hora"
         android:text="10:00"
-        android:layout_below="@id/mostrar_partido_equipo1"
-        android:layout_marginTop="50px"
-        android:textColor="@android:color/background_light"/>
+        android:layout_marginTop="22dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="114dp"
+        android:layout_marginStart="114dp"
+        android:layout_below="@+id/mostrar_partido_equipo1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -1,0 +1,4 @@
+http://www.androidcurso.com/index.php/56-mooc-introduccion/485-dialogos-de-seleccion-de-fecha-y-hora
+https://amatellanes.wordpress.com/2013/04/14/ejemplo-de-listview-en-android/
+http://www.androidhive.info/2012/01/android-login-and-registration-with-php-mysql-and-sqlite/
+https://amatellanes.wordpress.com/2013/09/09/android-spinner-dinamico-en-android-provincias-y-localidades-de-espana/

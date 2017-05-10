@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Usuario:"
+        android:text="@string/lusuario"
         android:id="@+id/login_txtusuario"
         android:layout_marginLeft="100px"
         android:layout_marginTop="100px"
@@ -24,7 +24,7 @@
         android:layout_below="@id/login_txtusuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contraseña:"
+        android:text="@string/lcontrasena"
         android:id="@+id/login_txtpassword"
         android:layout_marginLeft="100px"
         android:layout_marginTop="50px"
@@ -51,7 +51,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Conectar"
+        android:text="@string/bconectar"
         android:onClick="conexion"
         android:layout_below="@+id/login_txtpassword"
         android:layout_toRightOf="@id/login_txtpassword"

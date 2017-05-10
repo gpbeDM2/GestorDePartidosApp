@@ -34,6 +34,8 @@
     <string name="biniciar">INICIAR SESIÓN</string>
     <string name="lusuario">Usuario:</string>
     <string name="lcontrasena">Contraseña:</string>
+    <string name="bconectar">Conectar</string>
+
 
     <!-- AÑADIR PARTIDO -->
     <string name="lequipo">Equipo:</string>
@@ -46,5 +48,6 @@
     <string name="beditar">EDITAR</string>
     <string name="bborrar">BORRAR</string>
     <string name="title_activity_login">Sign in</string>
+
 
 </resources>

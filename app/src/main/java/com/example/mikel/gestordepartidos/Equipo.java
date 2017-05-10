@@ -4,6 +4,7 @@ public class Equipo {
 
 
     private String nombre;
+    private String codigo;
     private Entrenador primer_entrenador;
     private Entrenador segundo_entrenador;
 
@@ -12,9 +13,10 @@ public class Equipo {
         super();
     }
 
-    public Equipo(String n, Entrenador e1, Entrenador e2) {
+    public Equipo(String n, String c, Entrenador e1, Entrenador e2) {
 
         nombre = n;
+        codigo = c;
         primer_entrenador = e1;
         segundo_entrenador = e2;
 
@@ -29,6 +31,13 @@ public class Equipo {
         this.nombre = nombre;
     }
 
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String cod) {
+        codigo = cod;
+    }
 
     public Entrenador getPrimero() {
         return primer_entrenador;
