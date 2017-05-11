@@ -42,6 +42,8 @@
     <string name="lhora">Hora:</string>
     <string name="larbitro">Arbitro:</string>
     <string name="lmesa">Mesa:</string>
+    <string name="bconfirmar_partido">Confirmar partido</string>
+    <string name="bconfirmar_arbitraje">Confirmar</string>
 
     <!-- EQUIPO/ENTRENADOR -->
     <string name="banadir">AÑADIR</string>
@@ -49,8 +51,6 @@
     <string name="bborrar">BORRAR</string>
     <string name="title_activity_login">Sign in</string>
 
-    <!-- CREAR PARTIDOS -->
-    <string name="bconfirmar_partido">Confirmar partido</string>
 
 
 

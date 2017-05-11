@@ -10,56 +10,87 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mikel.gestordepartidos.mostrar_partido"
     android:background="@drawable/fondo10">
+
     <TextView
+        android:id="@+id/mostrar_partido_equipo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ekialdea infantil B"
-        android:id="@+id/mostrar_partido_equipo1"
+        android:layout_marginTop="39dp"
+        android:text="Infantil masculino B"
         android:textColor="@color/colorPrimary"
-        android:layout_marginLeft="49dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="46dp"
+        android:textSize="16sp"
         android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/mostrar_arbitro"
+        android:layout_toEndOf="@+id/mostrar_arbitro" />
+
+
+    <TextView
+        android:id="@+id/mostrar_partido_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:text="10:00"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/mostrar_partido_equipo1"
+        android:layout_toRightOf="@+id/mostrar_arbitro"
+        android:layout_toEndOf="@+id/mostrar_arbitro" />
+
+    <TextView
+        android:id="@+id/mostrar_arbitro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:text="@string/larbitro"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/spinner_arbitro"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/mostrar_partido_hora"
-        android:text="10:00"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignBaseline="@+id/mostrar_partido_equipo1"
-        android:layout_alignBottom="@+id/mostrar_partido_equipo1"
-        android:layout_toRightOf="@+id/mostrar_partido_equipo1"
-        android:layout_toEndOf="@+id/mostrar_partido_equipo1"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/larbitro"
-        android:id="@+id/mostrar_arbitro"
-        android:layout_below="@+id/mostrar_partido_equipo1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="29dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="21dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/mostrar_mesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
         android:text="@string/lmesa"
+        android:textSize="18sp"
         android:layout_below="@+id/mostrar_arbitro"
         android:layout_alignRight="@+id/mostrar_arbitro"
-        android:layout_alignEnd="@+id/mostrar_arbitro"
-        android:layout_marginTop="24dp" />
+        android:layout_alignEnd="@+id/mostrar_arbitro" />
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spin_arbitro"/>
+        android:id="@+id/spinner_arbitro"
+        android:layout_alignRight="@+id/mostrar_partido_equipo1"
+        android:layout_alignEnd="@+id/mostrar_partido_equipo1"
+        android:layout_toRightOf="@+id/mostrar_arbitro"
+        android:layout_toEndOf="@+id/mostrar_arbitro"
+        android:layout_below="@+id/mostrar_partido_hora" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mostrar_mesa"
+        android:layout_toRightOf="@+id/mostrar_mesa"
+        android:layout_alignRight="@+id/spinner_arbitro"
+        android:layout_alignEnd="@+id/spinner_arbitro" />
+
+    <Button
+        android:id="@+id/bconfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner"
+        android:layout_alignStart="@+id/spinner"
+        android:layout_below="@+id/spinner"
+        android:layout_marginTop="134dp"
+        android:text="@string/bconfirmar_arbitraje"
+        android:textSize="20sp"
+        android:background="@android:color/background_light"
+        android:textColor="@color/colorPrimary"/>
+
 
 </RelativeLayout>
