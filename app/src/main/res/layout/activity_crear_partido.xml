@@ -69,7 +69,7 @@
         android:background="@android:drawable/arrow_up_float" />
 
 
-    <EditText
+    <TextView
         android:id="@+id/nuevo_hora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
         android:layout_alignStart="@+id/hora_arriba"
         android:inputType="number"/>
 
-    <EditText
+    <TextView
         android:id="@+id/nuevo_minutos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
