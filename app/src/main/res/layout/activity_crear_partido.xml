@@ -1,17 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mikel.gestordepartidos.crearPartido"
-    android:background="@color/colorPrimary">
-
+    android:background="@drawable/fondo11"
+    android:orientation="vertical"
+    tools:context="com.example.mikel.gestordepartidos.crearPartido">
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spin_equipo"/>
+        android:id="@+id/spin_equipo"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/nuevo_minutos"
+        android:layout_alignEnd="@+id/nuevo_minutos"
+        android:layout_alignLeft="@+id/confirmar_partido"
+        android:layout_alignStart="@+id/confirmar_partido" />
+
+    <TextView
+        android:id="@+id/nuevo_puntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        android:layout_alignBaseline="@+id/nuevo_hora"
+        android:layout_alignBottom="@+id/nuevo_hora"
+        android:layout_centerHorizontal="true" />
 
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/minuto_abajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/arrow_down_float"
+        android:layout_below="@+id/minuto_arriba"
+        android:layout_alignLeft="@+id/minuto_arriba"
+        android:layout_alignStart="@+id/minuto_arriba" />
+
+    <Button
+        android:id="@+id/hora_abajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/arrow_down_float"
+        android:layout_alignBaseline="@+id/minuto_abajo"
+        android:layout_alignBottom="@+id/minuto_abajo"
+        android:layout_toLeftOf="@+id/nuevo_puntos"
+        android:layout_toStartOf="@+id/nuevo_puntos" />
+
+    <Button
+        android:id="@+id/minuto_arriba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/arrow_up_float"
+        android:layout_below="@+id/nuevo_minutos"
+        android:layout_toRightOf="@+id/nuevo_puntos"
+        android:layout_toEndOf="@+id/nuevo_puntos"
+        android:layout_marginTop="41dp" />
+
+    <Button
+        android:id="@+id/hora_arriba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hora_abajo"
+        android:layout_alignLeft="@+id/hora_abajo"
+        android:layout_alignStart="@+id/hora_abajo"
+        android:background="@android:drawable/arrow_up_float" />
+
+
+    <EditText
+        android:id="@+id/nuevo_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:background="@android:color/background_light"
+        android:text="00"
+        android:textSize="46sp"
+        android:layout_below="@+id/spin_equipo"
+        android:layout_alignLeft="@+id/hora_arriba"
+        android:layout_alignStart="@+id/hora_arriba" />
+
+    <EditText
+        android:id="@+id/nuevo_minutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nuevo_puntos"
+        android:layout_alignBottom="@+id/nuevo_puntos"
+        android:layout_alignEnd="@+id/minuto_arriba"
+        android:layout_alignRight="@+id/minuto_arriba"
+        android:background="@android:color/background_light"
+        android:text="00"
+        android:textSize="46sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmar_partido"
+        android:text="@string/bconfirmar_partido"
+        android:layout_below="@+id/minuto_abajo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp" />
+
+</RelativeLayout>

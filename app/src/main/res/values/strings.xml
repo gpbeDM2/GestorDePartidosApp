@@ -49,5 +49,9 @@
     <string name="bborrar">BORRAR</string>
     <string name="title_activity_login">Sign in</string>
 
+    <!-- CREAR PARTIDOS -->
+    <string name="bconfirmar_partido">Confirmar partido</string>
+
+
 
 </resources>
