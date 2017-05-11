@@ -11,11 +11,13 @@
     tools:context="com.example.mikel.gestordepartidos.ListadoCoordinador"
     android:background="@color/colorPrimary">
 
-    <ImageButton android:id="@+id/addpartido"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/addpartido"
         android:layout_width="wrap_content"
-        android:src="@drawable/plus"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/ic_input_add"
+        android:src="@android:drawable/ic_input_add" />
 
     <ListView android:id="@+id/listado_coordinador_Lst"
         android:layout_width="match_parent"

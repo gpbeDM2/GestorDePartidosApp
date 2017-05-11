@@ -79,7 +79,8 @@
         android:textSize="46sp"
         android:layout_below="@+id/spin_equipo"
         android:layout_alignLeft="@+id/hora_arriba"
-        android:layout_alignStart="@+id/hora_arriba" />
+        android:layout_alignStart="@+id/hora_arriba"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/nuevo_minutos"
@@ -91,7 +92,8 @@
         android:layout_alignRight="@+id/minuto_arriba"
         android:background="@android:color/background_light"
         android:text="00"
-        android:textSize="46sp" />
+        android:textSize="46sp"
+        android:inputType="number"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
