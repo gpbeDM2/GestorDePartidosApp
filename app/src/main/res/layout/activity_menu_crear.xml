@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
-        android:text="@string/bcrear_partdo" />
+        android:text="@string/bcrear_partido" />
 
     <Button
         android:id="@+id/crear_entrenador"
@@ -30,8 +30,8 @@
         android:id="@+id/crear_equipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/crear_partido"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="@string/bcrear_equipo" />
+        android:text="@string/bcrear_equipo"
+        android:layout_below="@+id/crear_partido"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

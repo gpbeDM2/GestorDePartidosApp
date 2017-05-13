@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mikel.gestordepartidos.CrearEntrenador">
+    tools:context="com.example.mikel.gestordepartidos.CrearEntrenador"
+    android:background="@drawable/fondo11"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lNombre"
+            android:text="@string/lnombreApellido"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/background_light"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNombre"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:text="              "
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bcrearEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bcrear_equipo"
+        android:textColor="@color/colorPrimaryDark" />
+
+</LinearLayout>
