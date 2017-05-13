@@ -30,7 +30,10 @@
         <activity android:name=".EditarPartidoUsuario" />
         <activity android:name=".ListadoCoordinador" />
         <activity android:name=".EditarPartidoCoordinador" />
-        <activity android:name=".crearPartido"></activity>
+        <activity android:name=".crearPartido" />
+        <activity android:name=".elegirFecha" />
+        <activity android:name=".elegirHora" />
+        <activity android:name=".menuCrear"></activity>
     </application>
 
 </manifest>

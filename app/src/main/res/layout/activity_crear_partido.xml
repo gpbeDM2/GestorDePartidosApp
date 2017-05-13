@@ -7,100 +7,96 @@
     android:orientation="vertical"
     tools:context="com.example.mikel.gestordepartidos.crearPartido">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lequipo"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/txtEquipo"
+        android:layout_marginBottom="52dp"
+        android:layout_alignBottom="@+id/txtHora"
+        android:layout_alignLeft="@+id/txtHora"
+        android:layout_alignStart="@+id/txtHora" />
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spin_equipo"
-        android:layout_marginTop="64dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/nuevo_minutos"
-        android:layout_alignEnd="@+id/nuevo_minutos"
-        android:layout_alignLeft="@+id/confirmar_partido"
-        android:layout_alignStart="@+id/confirmar_partido" />
+        android:layout_alignTop="@+id/txtEquipo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="95dp"
+        android:layout_marginEnd="95dp" />
 
     <TextView
-        android:id="@+id/nuevo_puntos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=":"
+        android:text="@string/lhora"
         android:textColor="@android:color/background_light"
-        android:textSize="36sp"
-        android:layout_alignBaseline="@+id/nuevo_hora"
-        android:layout_alignBottom="@+id/nuevo_hora"
-        android:layout_centerHorizontal="true" />
-
-
-    <Button
-        android:id="@+id/minuto_abajo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/arrow_down_float"
-        android:layout_below="@+id/minuto_arriba"
-        android:layout_alignLeft="@+id/minuto_arriba"
-        android:layout_alignStart="@+id/minuto_arriba" />
-
-    <Button
-        android:id="@+id/hora_abajo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/arrow_down_float"
-        android:layout_alignBaseline="@+id/minuto_abajo"
-        android:layout_alignBottom="@+id/minuto_abajo"
-        android:layout_toLeftOf="@+id/nuevo_puntos"
-        android:layout_toStartOf="@+id/nuevo_puntos" />
-
-    <Button
-        android:id="@+id/minuto_arriba"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/arrow_up_float"
-        android:layout_below="@+id/nuevo_minutos"
-        android:layout_toRightOf="@+id/nuevo_puntos"
-        android:layout_toEndOf="@+id/nuevo_puntos"
-        android:layout_marginTop="41dp" />
-
-    <Button
-        android:id="@+id/hora_arriba"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/hora_abajo"
-        android:layout_alignLeft="@+id/hora_abajo"
-        android:layout_alignStart="@+id/hora_abajo"
-        android:background="@android:drawable/arrow_up_float" />
-
+        android:id="@+id/txtHora"
+        android:layout_marginTop="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/confirmar_partido"
+        android:layout_toStartOf="@+id/confirmar_partido" />
 
     <TextView
-        android:id="@+id/nuevo_hora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:background="@android:color/background_light"
-        android:text="00"
-        android:textSize="46sp"
-        android:layout_below="@+id/spin_equipo"
-        android:layout_alignLeft="@+id/hora_arriba"
-        android:layout_alignStart="@+id/hora_arriba"
-        android:inputType="number"/>
+        android:text="@string/lFecha"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/txtFecha"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/txtEquipo"
+        android:layout_alignLeft="@+id/txtHora"
+        android:layout_alignStart="@+id/txtHora" />
 
-    <TextView
-        android:id="@+id/nuevo_minutos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/nuevo_puntos"
-        android:layout_alignBottom="@+id/nuevo_puntos"
-        android:layout_alignEnd="@+id/minuto_arriba"
-        android:layout_alignRight="@+id/minuto_arriba"
-        android:background="@android:color/background_light"
-        android:text="00"
-        android:textSize="46sp"
-        android:inputType="number"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/confirmar_partido"
         android:text="@string/bconfirmar_partido"
-        android:layout_below="@+id/minuto_abajo"
+        android:layout_below="@+id/elegirFecha"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp" />
+        android:layout_marginTop="66dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elegirHora"
+        android:text="@string/belegir_hora"
+        android:layout_alignBaseline="@+id/txtHora"
+        android:layout_alignBottom="@+id/txtHora"
+        android:layout_alignRight="@+id/elegirFecha"
+        android:layout_alignEnd="@+id/elegirFecha" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horaElegida"
+        android:layout_above="@+id/txtFecha"
+        android:layout_alignLeft="@+id/fechaElegida"
+        android:layout_alignStart="@+id/fechaElegida"
+        android:layout_toLeftOf="@+id/elegirFecha"
+        android:layout_toStartOf="@+id/elegirFecha"
+        android:textColor="@android:color/background_light"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fechaElegida"
+        android:layout_alignBaseline="@+id/txtFecha"
+        android:layout_alignBottom="@+id/txtFecha"
+        android:layout_toLeftOf="@+id/elegirFecha"
+        android:layout_toRightOf="@+id/txtEquipo"
+        android:layout_toEndOf="@+id/txtEquipo"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elegirFecha"
+        android:text="@string/belegir_fecha"
+        android:layout_alignBaseline="@+id/txtFecha"
+        android:layout_alignBottom="@+id/txtFecha"
+        android:layout_alignLeft="@+id/spin_equipo"
+        android:layout_alignStart="@+id/spin_equipo"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
 
 </RelativeLayout>

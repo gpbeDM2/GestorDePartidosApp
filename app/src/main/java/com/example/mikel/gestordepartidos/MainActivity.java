@@ -8,7 +8,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     protected void invitado(View v){
-        Intent intent = new Intent(MainActivity.this, ListadoInvitado.class);
+        Intent intent = new Intent(MainActivity.this, menuCrear.class);
         startActivity(intent);
     }
     public void usuario(View v){
