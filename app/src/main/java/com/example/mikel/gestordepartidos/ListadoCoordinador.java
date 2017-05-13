@@ -7,17 +7,26 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class ListadoCoordinador extends AppCompatActivity {
     private ListView lista;
-
+private ImageButton menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_coordinador);
+menu = (ImageButton) findViewById(R.id.menu);
 
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListadoCoordinador.this, menuCrear.class);
+                startActivity(intent);
+            }
+        });
         final String[] datos = new String[] {"Elemento 1","Elemento 2",
                 "Elemento 3","Elemento 4", "Elemento 5"};
         /*Esos datos hay que cambiarlos por una consulta a la base de datos*/

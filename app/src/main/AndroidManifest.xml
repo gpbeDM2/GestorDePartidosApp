@@ -33,7 +33,9 @@
         <activity android:name=".crearPartido" />
         <activity android:name=".elegirFecha" />
         <activity android:name=".elegirHora" />
-        <activity android:name=".menuCrear"></activity>
+        <activity android:name=".menuCrear" />
+        <activity android:name=".CrearEquipo" />
+        <activity android:name=".CrearEntrenador"></activity>
     </application>
 
 </manifest>

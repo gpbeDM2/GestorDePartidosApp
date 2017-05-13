@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_listado_invitado"
     android:layout_width="match_parent"
@@ -9,9 +9,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mikel.gestordepartidos.ListadoInvitado"
-    android:background="@color/colorPrimary">
-    <ListView android:id="@+id/listado_invitado_Lst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    android:background="@drawable/fondo11"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1">
 
-</RelativeLayout>
+
+    <ListView android:id="@+id/listado_invitado_Lst"
+        android:layout_width="wrap_content"
+        android:layout_height="412dp"
+        android:layout_weight="0.35" />
+
+    <Button
+        android:id="@+id/bactualziar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bactualizar" />
+
+</LinearLayout>

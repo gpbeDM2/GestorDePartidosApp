@@ -47,6 +47,7 @@
     <string name="belegir_fecha">Elegir fecha</string>
     <string name="bconfirmar_partido">Confirmar partido</string>
     <string name="bconfirmar">Confirmar</string>
+    <string name="bactualizar">Actualizar</string>
 
     <!-- EQUIPO/ENTRENADOR -->
     <string name="banadir">AÑADIR</string>
