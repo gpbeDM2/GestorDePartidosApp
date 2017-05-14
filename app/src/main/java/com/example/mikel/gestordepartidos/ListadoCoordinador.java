@@ -18,7 +18,7 @@ private ImageButton menu;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_coordinador);
-menu = (ImageButton) findViewById(R.id.menu);
+        menu = (ImageButton) findViewById(R.id.menu);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
