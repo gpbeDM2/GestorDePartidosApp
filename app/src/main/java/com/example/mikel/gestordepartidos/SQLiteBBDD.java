@@ -4,6 +4,7 @@ package com.example.mikel.gestordepartidos;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,29 +18,34 @@ public class SQLiteBBDD extends Activity{
     private SQLiteDatabase db;
 
     public SQLiteBBDD(){}
-    public void iniciar() {
-        //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+    public void iniciar() {
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
             //Insertamos los datos en la tabla Usuarios
             db.execSQL("INSERT INTO coordinador (nombre, con_encrip) " +
-                        "VALUES (coordinador, login)");
+                    "VALUES (coordinador, login)");
 
             //Cerramos la base de datos
-            db.close();
         }
+    }
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //Abrimos la base de datos 'gestor' en modo escritura
+        gest = new SQLiteHelper(this, "gestor", null, 1);
+
+        db = gest.getWritableDatabase();
     }
 
     public boolean loginC(String name, String pass) {
         boolean b = false;
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -87,9 +93,9 @@ public class SQLiteBBDD extends Activity{
     public ArrayList<Partido> partidos(){
         ArrayList<Partido> p = new ArrayList<>();
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -113,9 +119,9 @@ public class SQLiteBBDD extends Activity{
     public boolean editarPartidoA(String usuario, String equipo, String fecha){
         boolean b = false;
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -152,9 +158,9 @@ public class SQLiteBBDD extends Activity{
     public boolean editarPartidoM(String usuario, String equipo, String fecha){
         boolean b = false;
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -191,9 +197,9 @@ public class SQLiteBBDD extends Activity{
     public ArrayList<String> equipos(){
         ArrayList<String> e = new ArrayList<>();
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -216,9 +222,9 @@ public class SQLiteBBDD extends Activity{
 
     public boolean crearPartido(String equipo, String fecha) {
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -244,16 +250,15 @@ public class SQLiteBBDD extends Activity{
                     return false;
                 }
             }
-
         }
         return false;
     }
 
     public boolean crearEquipo(String nombre, int ent1, int ent2) {
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -279,7 +284,6 @@ public class SQLiteBBDD extends Activity{
                     return false;
                 }
             }
-
         }
         return false;
     }
@@ -288,8 +292,8 @@ public class SQLiteBBDD extends Activity{
         ArrayList<Entrenador> e = new ArrayList<Entrenador>();
 
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
-        db = gest.getWritableDatabase();
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -312,8 +316,8 @@ public class SQLiteBBDD extends Activity{
 
     public boolean crearEntrenador(String nombre, String contrasena) {
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
-        db = gest.getWritableDatabase();
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
@@ -339,7 +343,6 @@ public class SQLiteBBDD extends Activity{
                     return false;
                 }
             }
-
         }
         return false;
     }

@@ -15,22 +15,22 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     private String sqlCreateEn  = "create table entrenador("
                         + "id INTEGER primary key AUTOINCREMENT, "
-                        + "nombre TEXT not null ,"
+                        + "nombre TEXT not null, "
                         + "con_encrip TEXT not null, "
                         + "arbitraje INTEGER, "
                         + "mesa	INTEGER, "
                         + "tlf INTEGER)";
 
     private String sqlCreatePa  = "create table partido("
-                        + "equipo TEXT not null,"
-                        + "fecha TEXT,"
-                        + "arbitro INTEGER,"
-                        + "mesa INTEGER,"
+                        + "equipo TEXT not null, "
+                        + "fecha TEXT, "
+                        + "arbitro INTEGER, "
+                        + "mesa INTEGER, "
                         + "primary key (equipo,fecha))";
 
     private String sqlCreateEq  = "create table equipo("
-                        + "nombre TEXT not null primary key,"
-                        + "entrenador1 INTEGER not null,"
+                        + "nombre TEXT not null primary key, "
+                        + "entrenador1 INTEGER not null, "
                         + "entrenador2 INTEGER not null)";
 
     public SQLiteHelper(Context contexto, String nombre,
