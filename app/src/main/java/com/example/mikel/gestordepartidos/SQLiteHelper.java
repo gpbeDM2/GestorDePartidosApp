@@ -10,13 +10,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private String sqlCreateCo = "CREATE TABLE coordinador("
                     + "id INTEGER primary key AUTOINCREMENT, "
                     + "nombre TEXT not null, "
-                    + "con_encrip TEXT not null, "
+                    + "conencrip TEXT not null, "
                     + "tlf INTEGER)";
 
     private String sqlCreateEn  = "create table entrenador("
                         + "id INTEGER primary key AUTOINCREMENT, "
                         + "nombre TEXT not null, "
-                        + "con_encrip TEXT not null, "
+                        + "conencrip TEXT not null, "
                         + "arbitraje INTEGER, "
                         + "mesa	INTEGER, "
                         + "tlf INTEGER)";

@@ -2,6 +2,7 @@ package com.example.mikel.gestordepartidos;
 
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -26,8 +27,16 @@ public class SQLiteBBDD extends Activity{
         if (db != null) {
             db.beginTransaction();
 
+            //Creamos el registro a insertar como objeto ContentValues
+            ContentValues nuevoRegistro = new ContentValues();
+            nuevoRegistro.put("conencrip", "login");
+            nuevoRegistro.put("nombre","coordinador");
+
+            //Insertamos el registro en la base de datos
+            db.insert("coordinador", null, nuevoRegistro);
+
             //Insertamos los datos en la tabla Usuarios
-            db.rawQuery("INSERT INTO coordinador (nombre, con_encrip) " +
+            db.rawQuery("INSERT INTO coordinador (nombre, conencrip) " +
                     "VALUES(coordinador, login)",null);
             db.setTransactionSuccessful();
             db.endTransaction();
@@ -40,7 +49,7 @@ public class SQLiteBBDD extends Activity{
         super.onCreate(savedInstanceState);
 
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        gest = new SQLiteHelper(this, "gestor2", null, 1);
 
         db = gest.getWritableDatabase();
     }
@@ -55,13 +64,12 @@ public class SQLiteBBDD extends Activity{
         //Si hemos abierto correctamente la base de datos
 
         if (db != null) {
-            Cursor c = db.rawQuery("SELECT nombre,con_encrip FROM coordinador", null);
+            Cursor c = db.rawQuery("SELECT nombre,conencrip FROM coordinador", null);
             if (c.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
                 do {
                     String nombre       = c.getString(0);
                     String con_encrip   = c.getString(1);
-                    Log.d("LoginC2", nombre+" "+con_encrip);
                     if(nombre.equals(name) && con_encrip.equals(pass)){
                         b = true;
                     }
@@ -81,7 +89,7 @@ public class SQLiteBBDD extends Activity{
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
-            Cursor c = db.rawQuery("SELECT nombre,con_encrip FROM entrenador", null);
+            Cursor c = db.rawQuery("SELECT nombre,conencrip FROM entrenador", null);
             if (c.moveToFirst()) {
                 //Recorremos el cursor hasta que no haya más registros
                 do {
@@ -334,7 +342,7 @@ public class SQLiteBBDD extends Activity{
             if(c.moveToFirst()){
                 Toast.makeText(this, "El entrenador ya existe", Toast.LENGTH_SHORT).show();
             } else {
-                s = "INSERT INTO entrenador (nombre, con_encrip) VALUES (" + nombre + "," + contrasena + ");";
+                s = "INSERT INTO entrenador (nombre, conencrip) VALUES (" + nombre + "," + contrasena + ");";
                 db.rawQuery(s, null);
 
                 //Comprobamos la insercion.

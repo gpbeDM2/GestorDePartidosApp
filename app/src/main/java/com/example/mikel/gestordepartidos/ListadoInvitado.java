@@ -40,5 +40,17 @@ public class ListadoInvitado extends AppCompatActivity {
         setContentView(R.layout.activity_listado_invitado);
 
         this.cargar();
+
+        //Para ver el resultado.
+        String[] datos =    {"Infantil A\n02/03/17\t10:00",
+                             "Infantil B\n02/03/17\t12:00",
+                             "Cadetes\n09/03/17\t9:00",
+                             "Alebin A\n09/03/17\t12:00",
+                             "Alebin B\n014/03/17\t12:00"};
+
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, datos);
+        lista = (ListView)findViewById(R.id.listado_invitado_Lst);
+        lista.setAdapter(adaptador);
     }
 }
