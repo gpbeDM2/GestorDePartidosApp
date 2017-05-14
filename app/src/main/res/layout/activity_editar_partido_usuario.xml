@@ -14,31 +14,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ekialdea infantil B"
-            android:id="@+id/editar_partido_usuario_equipo1"
-            android:textColor="@android:color/background_light"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" - "
-            android:layout_toRightOf="@id/editar_partido_usuario_equipo1"
-            android:id="@+id/editar_partido_usuario_guion"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px"
+            android:id="@+id/editar_partido_usuario_equipo"
             android:textColor="@android:color/background_light"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ekialdea infantil c"
-            android:layout_toRightOf="@id/editar_partido_usuario_guion"
-            android:id="@+id/editar_partido_usuario_equipo2"
-            android:textColor="@android:color/background_light"/>
-        <TextView
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/editar_partido_usuario_hora"
             android:text="10:00"
-            android:layout_below="@id/editar_partido_usuario_equipo1"
+            android:layout_below="@id/editar_partido_usuario_equipo"
             android:layout_marginTop="50px"
             android:textColor="@android:color/background_light"/>
         <TextView
@@ -53,12 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/editar_partido_usuario_arbitro"
-            android:text="Jon Ochoa"
             android:layout_below="@id/editar_partido_usuario_hora"
             android:layout_marginTop="50px"
             android:layout_toRightOf="@id/editar_partido_usuario_txtarb"
             android:layout_marginLeft="50px"
-            android:visibility="invisible"
             android:textColor="@android:color/background_light"/>
         <Button
             android:layout_width="280px"
@@ -67,7 +49,7 @@
             android:text="añadir arbitro"
             android:layout_below="@id/editar_partido_usuario_hora"
             android:layout_marginTop="25px"
-            android:layout_toRightOf="@id/editar_partido_usuario_txtarb"
+            android:layout_toRightOf="@id/editar_partido_usuario_arbitro"
             android:layout_marginLeft="50px"
             android:background="@drawable/borde_botones_blanco"
             android:textColor="@color/colorPrimary"
@@ -84,12 +66,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/editar_partido_usuario_mesa"
-            android:text="1"
             android:layout_below="@id/editar_partido_usuario_arbitro"
             android:layout_marginTop="50px"
             android:layout_toRightOf="@id/editar_partido_usuario_txtarb"
             android:layout_marginLeft="55px"
             android:textColor="@android:color/background_light"/>
+        <Button
+            android:layout_width="280px"
+            android:layout_height="75px"
+            android:id="@+id/editar_partido_usuario_botonmesa"
+            android:text="añadir arbitro"
+            android:layout_below="@id/editar_partido_usuario_botonarbitro"
+            android:layout_marginTop="25px"
+            android:layout_toRightOf="@id/editar_partido_usuario_mesa"
+            android:layout_marginLeft="50px"
+            android:background="@drawable/borde_botones_blanco"
+            android:textColor="@color/colorPrimary"
+            android:onClick="addmesa"/>
 
 
     </RelativeLayout>

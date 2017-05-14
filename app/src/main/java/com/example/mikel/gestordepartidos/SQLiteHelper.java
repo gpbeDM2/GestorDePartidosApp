@@ -23,7 +23,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     private String sqlCreatePa  = "create table partido("
                         + "equipo varchar(50) not null,"
-                        + "fecha datetime,"
+                        + "fecha varchar(50),"
                         + "arbitro int(4),"
                         + "mesa int(4),"
                         + "constraint PK_partido primary key (equipo,fecha))";

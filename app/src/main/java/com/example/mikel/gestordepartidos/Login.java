@@ -21,11 +21,13 @@ public class Login extends AppCompatActivity {
             b = sqdb.loginC(login_edusuario.getText().toString(), login_edpassword.getText().toString());
             if(b) {
                 Intent intent = new Intent(this, ListadoCoordinador.class);
+                intent.putExtra("usuario",login_edusuario.getText().toString());
                 startActivity(intent);
             } else {
                 b = sqdb.loginE(login_edusuario.getText().toString(), login_edpassword.getText().toString());
                 if(b) {
                     Intent intent = new Intent(this, ListadoUsuario.class);
+                    intent.putExtra("usuario",login_edusuario.getText().toString());
                     startActivity(intent);
                 } else {
                     Toast.makeText(this,"Credenciales incorrectas",Toast.LENGTH_SHORT).show();

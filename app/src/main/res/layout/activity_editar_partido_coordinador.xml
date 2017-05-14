@@ -14,30 +14,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ekialdea infantil B"
-        android:id="@+id/editar_partido_coordinador_equipo1"
+        android:id="@+id/editar_partido_coordinador_equipo"
         android:textColor="@android:color/background_light"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" - "
-        android:layout_toRightOf="@id/editar_partido_coordinador_equipo1"
-        android:id="@+id/editar_partido_coordinador_guion"
-        android:layout_marginLeft="30px"
-        android:layout_marginRight="30px"
-        android:textColor="@android:color/background_light"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ekialdea infantil c"
-        android:layout_toRightOf="@id/editar_partido_coordinador_guion"
-        android:id="@+id/editar_partido_coordinador_equipo2"
-        android:textColor="@android:color/background_light"/>
+
     <Button
         android:layout_width="280px"
         android:layout_height="75px"
         android:id="@+id/editar_partido_coordinador_botonequipos"
         android:text="Elegir equipos"
-        android:layout_below="@id/editar_partido_coordinador_equipo1"
+        android:layout_below="@id/editar_partido_coordinador_equipo"
         android:background="@drawable/borde_botones_blanco"
         android:textColor="@color/colorPrimary"
 
@@ -64,12 +49,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editar_partido_coordinador_arbitro"
-        android:text="Jon Ochoa"
         android:layout_below="@id/editar_partido_coordinador_hora"
         android:layout_marginTop="50px"
         android:layout_toRightOf="@id/editar_partido_coordinador_txtarb"
         android:layout_marginLeft="50px"
-        android:visibility="invisible"
         android:textColor="@android:color/background_light"/>
 
     <TextView
@@ -84,7 +67,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editar_partido_coordinador_mesa"
-        android:text="1"
         android:layout_below="@id/editar_partido_coordinador_arbitro"
         android:layout_marginTop="50px"
         android:layout_toRightOf="@id/editar_partido_coordinador_txtarb"
@@ -100,30 +82,6 @@
         android:layout_marginLeft="50px"
         android:layout_marginTop="50px"
         android:onClick="elegirhora"
-        android:background="@drawable/borde_botones_blanco"
-        android:textColor="@color/colorPrimary"/>
-    <Button
-        android:layout_width="280px"
-        android:layout_height="75px"
-        android:id="@+id/editar_partido_coordinador_botonarbitro"
-        android:text="elegir arbitro"
-        android:layout_below="@id/editar_partido_coordinador_hora"
-        android:layout_marginTop="25px"
-        android:layout_toRightOf="@id/editar_partido_coordinador_mesa"
-        android:layout_marginLeft="50px"
-        android:onClick="addarbitro"
-        android:background="@drawable/borde_botones_blanco"
-        android:textColor="@color/colorPrimary"/>
-    <Button
-        android:layout_width="280px"
-        android:layout_height="75px"
-        android:id="@+id/editar_partido_coordinador_botonmesa"
-        android:text="Elegir Mesa"
-        android:layout_below="@id/editar_partido_coordinador_arbitro"
-        android:layout_toRightOf="@id/editar_partido_coordinador_mesa"
-        android:layout_marginLeft="50px"
-        android:layout_marginTop="25px"
-        android:onClick="elegirmesa"
         android:background="@drawable/borde_botones_blanco"
         android:textColor="@color/colorPrimary"/>
 

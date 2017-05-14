@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class ListadoInvitado extends AppCompatActivity {
     private ListView lista;
 
@@ -17,28 +19,20 @@ public class ListadoInvitado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_invitado);
 
-
-        final String[] datos = new String[] {"Elemento 1","Elemento 2",
-                "Elemento 3","Elemento 4", "Elemento 5"};
-        /*Esos datos hay que cambiarlos por una consulta a la base de datos*/
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, datos);
-        lista = (ListView)findViewById(R.id.listado_invitado_Lst);
-        lista.setAdapter(adaptador);
-
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                Object o = lista.getItemAtPosition(position);
-                Equipo eq=(Equipo) o;
-                Toast.makeText(getBaseContext(),o.toString(),Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(ListadoInvitado.this, mostrar_partido.class);
-                intent.putExtra("equipo1","nombre equipo1");
-                intent.putExtra("equipo2","nombre equipo2");
-                intent.putExtra("hora","la hora");
-                startActivity(intent);
+        SQLiteBBDD sqdb = new SQLiteBBDD();
+        ArrayList<Partido> partidos = sqdb.partidos();
+        if(partidos!=null) {
+            String[] datos = new String[partidos.size()];
+            for(int i=0;i<partidos.size();i++){
+                datos[i] = partidos.get(i).getEquipo() + " " + partidos.get(i).getHora();
             }
-        });
+
+            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1, datos);
+            lista = (ListView)findViewById(R.id.listado_invitado_Lst);
+            lista.setAdapter(adaptador);
+        } else {
+            Toast.makeText(this, "Error al cargar los partidos", Toast.LENGTH_SHORT).show();
+        }
     }
 }
