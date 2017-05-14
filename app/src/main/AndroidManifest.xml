@@ -26,7 +26,6 @@
         <activity
             android:name=".ListadoInvitado"
             android:label="@string/vlista" />
-        <activity android:name=".mostrar_partido" />
         <activity android:name=".ListadoUsuario" />
         <activity android:name=".EditarPartidoUsuario" />
         <activity android:name=".ListadoCoordinador" />
