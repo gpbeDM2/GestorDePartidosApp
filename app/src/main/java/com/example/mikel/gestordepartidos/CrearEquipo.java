@@ -1,5 +1,6 @@
 package com.example.mikel.gestordepartidos;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class CrearEquipo extends AppCompatActivity {
     Spinner spinner1, spinner2;
     SQLiteBBDD sqdb;
     EditText txtNombre;
+    public Context c;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,29 +28,32 @@ public class CrearEquipo extends AppCompatActivity {
         spinner1        = (Spinner) findViewById(R.id.spinner_entrenador1);
         spinner2        = (Spinner) findViewById(R.id.spinner_entrenador2);
         txtNombre       = (EditText)findViewById(R.id.txtNombre);
+        c = this.getApplicationContext();
 
         sqdb = new SQLiteBBDD();
         ArrayList<Entrenador> array = sqdb.entrenadores();
 
+        if(array != null) {
+            ArrayAdapter<Entrenador> spinnerArrayAdapter = new ArrayAdapter<Entrenador>(this, android.R.layout.simple_spinner_item, array); //selected item will look like a spinner set from XML
+            spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner1.setAdapter(spinnerArrayAdapter);
+            spinner2.setAdapter(spinnerArrayAdapter);
+        }
 
-        ArrayAdapter<Entrenador> spinnerArrayAdapter = new ArrayAdapter<Entrenador>(this, android.R.layout.simple_spinner_item, array); //selected item will look like a spinner set from XML
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(spinnerArrayAdapter);
-        spinner2.setAdapter(spinnerArrayAdapter);
 
         bcrearEquipo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(txtNombre.getText().toString().equals(""))
                 {
-                    Toast.makeText(null, "Por favor introduzca el nombre del equipo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(c, "Por favor introduzca el nombre del equipo", Toast.LENGTH_SHORT).show();
                 } else {
                     Entrenador ent1 = (Entrenador) spinner1.getSelectedItem();
                     Entrenador ent2 = (Entrenador) spinner2.getSelectedItem();
                     boolean b = sqdb.crearEquipo(txtNombre.getText().toString(), ent1.getId(), ent2.getId());
                     if (b) {
-                        Toast.makeText(null, "Insercion realizada correctamente", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(c, "Insercion realizada correctamente", Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(null, "Error durante la insercion", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(c, "Error durante la insercion", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
