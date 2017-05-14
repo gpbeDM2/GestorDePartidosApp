@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mikel.gestordepartidos.menuCrear"
+    android:background="@color/colorPrimaryDark">
+
+
+    <Button
+        android:id="@+id/crear_partido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:text="@string/bcrear_partido" />
+
+    <Button
+        android:id="@+id/crear_entrenador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crear_equipo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/bcrear_entrenador" />
+
+    <Button
+        android:id="@+id/crear_equipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/bcrear_equipo"
+        android:layout_below="@+id/crear_partido"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

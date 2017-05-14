@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mikel.gestordepartidos">
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +15,7 @@
             android:label="@string/vmain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -23,5 +25,17 @@
         <activity
             android:name=".ListadoInvitado"
             android:label="@string/vlista" />
+        <activity android:name=".mostrar_partido" />
+        <activity android:name=".ListadoUsuario" />
+        <activity android:name=".EditarPartidoUsuario" />
+        <activity android:name=".ListadoCoordinador" />
+        <activity android:name=".EditarPartidoCoordinador" />
+        <activity android:name=".crearPartido" />
+        <activity android:name=".elegirFecha" />
+        <activity android:name=".elegirHora" />
+        <activity android:name=".menuCrear" />
+        <activity android:name=".CrearEquipo" />
+        <activity android:name=".CrearEntrenador"></activity>
     </application>
+
 </manifest>

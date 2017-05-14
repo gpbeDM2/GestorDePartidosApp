@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo11"
+    android:orientation="vertical"
+    tools:context="com.example.mikel.gestordepartidos.crearPartido">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lequipo"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/txtEquipo"
+        android:layout_marginBottom="52dp"
+        android:layout_alignBottom="@+id/txtHora"
+        android:layout_alignLeft="@+id/txtHora"
+        android:layout_alignStart="@+id/txtHora" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin_equipo"
+        android:layout_alignTop="@+id/txtEquipo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="95dp"
+        android:layout_marginEnd="95dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lhora"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/txtHora"
+        android:layout_marginTop="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/confirmar_partido"
+        android:layout_toStartOf="@+id/confirmar_partido" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lFecha"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/txtFecha"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/txtEquipo"
+        android:layout_alignLeft="@+id/txtHora"
+        android:layout_alignStart="@+id/txtHora" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmar_partido"
+        android:text="@string/bconfirmar_partido"
+        android:layout_below="@+id/elegirFecha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elegirHora"
+        android:text="@string/belegir_hora"
+        android:layout_alignBaseline="@+id/txtHora"
+        android:layout_alignBottom="@+id/txtHora"
+        android:layout_alignRight="@+id/elegirFecha"
+        android:layout_alignEnd="@+id/elegirFecha" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horaElegida"
+        android:layout_above="@+id/txtFecha"
+        android:layout_alignLeft="@+id/fechaElegida"
+        android:layout_alignStart="@+id/fechaElegida"
+        android:layout_toLeftOf="@+id/elegirFecha"
+        android:layout_toStartOf="@+id/elegirFecha"
+        android:textColor="@android:color/background_light"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fechaElegida"
+        android:layout_alignBaseline="@+id/txtFecha"
+        android:layout_alignBottom="@+id/txtFecha"
+        android:layout_toLeftOf="@+id/elegirFecha"
+        android:layout_toRightOf="@+id/txtEquipo"
+        android:layout_toEndOf="@+id/txtEquipo"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elegirFecha"
+        android:text="@string/belegir_fecha"
+        android:layout_alignBaseline="@+id/txtFecha"
+        android:layout_alignBottom="@+id/txtFecha"
+        android:layout_alignLeft="@+id/spin_equipo"
+        android:layout_alignStart="@+id/spin_equipo"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+</RelativeLayout>

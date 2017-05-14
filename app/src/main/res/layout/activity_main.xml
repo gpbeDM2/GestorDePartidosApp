@@ -10,19 +10,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mikel.gestordepartidos.MainActivity"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="bottom|center"
+    android:background="@drawable/fondo4"
     >
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/binvitado"
-        android:onClick="invitado"/>
+        android:onClick="invitado"
+        android:layout_marginBottom="30px"
+        android:background="@drawable/borde_botones"
+        android:paddingLeft="100px"
+        android:paddingRight="100px"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/busuario"
-        android:onClick="usuario"/>
+        android:onClick="usuario"
+        android:layout_marginBottom="100px"
+        android:background="@drawable/borde_botones"
+        android:paddingLeft="100px"
+        android:paddingRight="100px"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        />
 
 </LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item android:id="@+id/add_equipo"
+        android:title="Añadir Equipo"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/borrar_equipo"
+        android:title="Borrar Equipo"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/editar_equipo"
+        android:title="Editar Equipo"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/add_entrenador"
+        android:title="Añadir Entrenador"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/editar_entrenador"
+        android:title="Editar Entrenador"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/borrar_Entrenador"
+        android:title="Borrar Equipo"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

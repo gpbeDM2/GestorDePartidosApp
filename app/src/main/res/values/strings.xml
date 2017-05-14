@@ -34,17 +34,39 @@
     <string name="biniciar">INICIAR SESIÓN</string>
     <string name="lusuario">Usuario:</string>
     <string name="lcontrasena">Contraseña:</string>
+    <string name="bconectar">Conectar</string>
+
 
     <!-- AÑADIR PARTIDO -->
     <string name="lequipo">Equipo:</string>
     <string name="lhora">Hora:</string>
     <string name="larbitro">Arbitro:</string>
+    <string name="lFecha">Fecha:</string>
     <string name="lmesa">Mesa:</string>
+    <string name="belegir_hora">Elegir hora</string>
+    <string name="belegir_fecha">Elegir fecha</string>
+    <string name="bconfirmar_partido">Confirmar partido</string>
+    <string name="bconfirmar">Confirmar</string>
+    <string name="bactualizar">Actualizar</string>
 
     <!-- EQUIPO/ENTRENADOR -->
     <string name="banadir">AÑADIR</string>
     <string name="beditar">EDITAR</string>
     <string name="bborrar">BORRAR</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="bcrearEquipo">Crear equipo</string>
+    <string name="bcrearEntrenador">Crear entrenador</string>
 
+    <!-- MENU CREAR-->
+    <string name="bcrear_partido">CREAR PARTIDO</string>
+    <string name="bcrear_equipo">CREAR EQUIPO</string>
+    <string name="bcrear_entrenador">CREAR ENTRENADOR</string>
+
+
+
+    <!-- CREAR EQUIPO-->
+    <string name="lprimerEntrenador">Entrenador 1:</string>
+    <string name="lsegundoEntrenador">Entrenador 2:</string>
+    <string name="lnombre">Nombre:</string>
+    <string name="lnombreApellido">Nombre y Apellido:</string>
 </resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo11"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.mikel.gestordepartidos.CrearEquipo">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lNombre"
+            android:text="@string/lnombre"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/background_light"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNombre"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:text="              "
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:text="@string/lprimerEntrenador"
+            android:textColor="@android:color/background_light"
+            android:id="@+id/lequipo"/>
+
+        <Spinner
+            android:id="@+id/spinner_entrenador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="@string/lsegundoEntrenador"
+            android:textColor="@android:color/background_light" />
+
+        <Spinner
+            android:id="@+id/spinner_entrenador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bcrearEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bcrear_equipo"
+        android:textColor="@color/colorPrimaryDark" />
+
+</LinearLayout>

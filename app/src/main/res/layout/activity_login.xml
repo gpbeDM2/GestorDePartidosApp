@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
@@ -9,6 +9,57 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mikel.gestordepartidos.Login"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fondo3"
+    android:gravity="bottom|center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lusuario"
+        android:id="@+id/login_txtusuario"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="100px"
+        android:textColor="@android:color/background_light"/>
+    <TextView
+        android:layout_below="@id/login_txtusuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lcontrasena"
+        android:id="@+id/login_txtpassword"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="50px"
+        android:textColor="@android:color/background_light"/>
+    <EditText
+        android:layout_width="300px"
+        android:layout_height="50px"
+        android:layout_toRightOf="@id/login_txtpassword"
+        android:layout_marginLeft="50px"
+        android:id="@+id/login_edusuario"
+        android:layout_marginTop="100px"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/background_light" />
+    <EditText
+        android:layout_width="300px"
+        android:layout_height="50px"
+        android:layout_below="@id/login_txtusuario"
+        android:layout_marginTop="50px"
+        android:layout_toRightOf="@id/login_txtpassword"
+        android:layout_marginLeft="50px"
+        android:id="@+id/login_edpassword"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/background_light"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bconectar"
+        android:onClick="conexion"
+        android:layout_below="@+id/login_txtpassword"
+        android:layout_toRightOf="@id/login_txtpassword"
+        android:layout_marginTop="200px"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/borde_botones_blanco"
+        android:paddingLeft="100px"
+        android:paddingRight="100px"
+        android:textSize="18sp" />
 
-</LinearLayout>
+</RelativeLayout>
