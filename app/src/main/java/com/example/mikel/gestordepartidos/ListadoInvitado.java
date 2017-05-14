@@ -14,13 +14,12 @@ import java.util.ArrayList;
 public class ListadoInvitado extends AppCompatActivity {
     private ListView lista;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listado_invitado);
+    public void actualizar(View v) {
+        this.cargar();
+    }
 
-        SQLiteBBDD sqdb = new SQLiteBBDD();
-        ArrayList<Partido> partidos = sqdb.partidos();
+    public void cargar(){
+        ArrayList<Partido> partidos = MainActivity.sqdb.partidos();
         if(partidos!=null) {
             String[] datos = new String[partidos.size()];
             for(int i=0;i<partidos.size();i++){
@@ -34,5 +33,12 @@ public class ListadoInvitado extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Error al cargar los partidos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_listado_invitado);
+
+        this.cargar();
     }
 }

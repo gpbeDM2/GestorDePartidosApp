@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
     //Sentencia SQL para crear las tablas
-    private String sqlCreateCo = "CREATE TABLE coordinador ("
+    private String sqlCreateCo = "CREATE TABLE coordinador("
                     + "id INTEGER primary key AUTOINCREMENT, "
                     + "nombre TEXT not null, "
                     + "con_encrip TEXT not null, "

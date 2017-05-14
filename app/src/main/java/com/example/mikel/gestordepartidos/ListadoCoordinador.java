@@ -17,23 +17,12 @@ public class ListadoCoordinador extends AppCompatActivity {
     private ListView lista;
     private String usuario;
     private ImageButton menu;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listado_coordinador);
-        menu = (ImageButton) findViewById(R.id.menu);
 
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ListadoCoordinador.this, menuCrear.class);
-                startActivity(intent);
-            }
-        });
+    public void actualizar(View v) {
+        this.cargar();
+    }
 
-        Intent in = getIntent();
-        usuario = in.getStringExtra("usuario");
-
+    public void cargar(){
         SQLiteBBDD sqdb = new SQLiteBBDD();
         ArrayList<Partido> partidos = sqdb.partidos();
         if(partidos!=null) {
@@ -63,8 +52,27 @@ public class ListadoCoordinador extends AppCompatActivity {
                 }
             });
         } else {
-        Toast.makeText(this, "Error al cargar los partidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error al cargar los partidos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_listado_coordinador);
+        menu = (ImageButton) findViewById(R.id.menu);
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListadoCoordinador.this, menuCrear.class);
+                startActivity(intent);
+            }
+        });
+
+        Intent in = getIntent();
+        usuario = in.getStringExtra("usuario");
+
+        this.cargar();
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

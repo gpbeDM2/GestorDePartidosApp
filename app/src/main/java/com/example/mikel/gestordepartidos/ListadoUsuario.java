@@ -15,15 +15,11 @@ public class ListadoUsuario extends AppCompatActivity {
     private ListView lista;
     private String usuario;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listado_usuario);
+    public void actualizar(View v) {
+        this.cargar();
+    }
 
-        Intent in = getIntent();
-
-        usuario = in.getStringExtra("usuario");
-
+    public void cargar(){
         SQLiteBBDD sqdb = new SQLiteBBDD();
         ArrayList<Partido> partidos = sqdb.partidos();
         if(partidos!=null) {
@@ -53,5 +49,16 @@ public class ListadoUsuario extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Error al cargar los partidos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_listado_usuario);
+
+        Intent in = getIntent();
+
+        usuario = in.getStringExtra("usuario");
+
+        this.cargar();
     }
 }

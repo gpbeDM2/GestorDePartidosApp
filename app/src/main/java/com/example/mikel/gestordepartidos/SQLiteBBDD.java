@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -23,10 +24,14 @@ public class SQLiteBBDD extends Activity{
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {
-            //Insertamos los datos en la tabla Usuarios
-            db.execSQL("INSERT INTO coordinador (nombre, con_encrip) " +
-                    "VALUES (coordinador, login)");
+            db.beginTransaction();
 
+            //Insertamos los datos en la tabla Usuarios
+            db.rawQuery("INSERT INTO coordinador (nombre, con_encrip) " +
+                    "VALUES(coordinador, login)",null);
+            db.setTransactionSuccessful();
+            db.endTransaction();
+            db.close();
             //Cerramos la base de datos
         }
     }
@@ -48,6 +53,7 @@ public class SQLiteBBDD extends Activity{
         //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
+
         if (db != null) {
             Cursor c = db.rawQuery("SELECT nombre,con_encrip FROM coordinador", null);
             if (c.moveToFirst()) {
@@ -55,6 +61,7 @@ public class SQLiteBBDD extends Activity{
                 do {
                     String nombre       = c.getString(0);
                     String con_encrip   = c.getString(1);
+                    Log.d("LoginC2", nombre+" "+con_encrip);
                     if(nombre.equals(name) && con_encrip.equals(pass)){
                         b = true;
                     }
@@ -68,9 +75,9 @@ public class SQLiteBBDD extends Activity{
     public boolean loginE(String name, String pass) {
         boolean b = false;
         //Abrimos la base de datos 'gestor' en modo escritura
-        gest = new SQLiteHelper(this, "gestor", null, 1);
+        //gest = new SQLiteHelper(this, "gestor", null, 1);
 
-        db = gest.getWritableDatabase();
+        //db = gest.getWritableDatabase();
 
         //Si hemos abierto correctamente la base de datos
         if (db != null) {

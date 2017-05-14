@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static SQLiteBBDD sqdb;
     protected void invitado(View v){
         Intent intent = new Intent(MainActivity.this, ListadoInvitado.class);
         startActivity(intent);
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SQLiteBBDD sqdb = new SQLiteBBDD();
+        sqdb = new SQLiteBBDD();
         sqdb.iniciar();
     }
 }
