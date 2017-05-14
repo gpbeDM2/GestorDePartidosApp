@@ -30,11 +30,7 @@ public class elegirFecha extends AppCompatActivity {
         calendario.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-
                 fecha = dayOfMonth + "/"+month+"/"+year;
-
-
-
             }
         });
 

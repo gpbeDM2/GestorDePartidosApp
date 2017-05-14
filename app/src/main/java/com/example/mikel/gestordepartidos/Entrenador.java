@@ -4,21 +4,18 @@ package com.example.mikel.gestordepartidos;
 public class Entrenador {
 
     private String nombre;
-    private String apellido;
-    private Equipo equipo;
+    private int id;
 
     public Entrenador() {
         super();
     }
 
-    public Entrenador(String n, String ape, Equipo equip) {
+    public Entrenador(String n, int i) {
 
         nombre = n;
-        apellido = ape;
-        equipo = equip;
+        id = i;
 
     }
-
 
     public String getNombre() {
         return nombre;
@@ -28,24 +25,15 @@ public class Entrenador {
         this.nombre = nombre;
     }
 
-
-    public String getApellido() {
-        return apellido;
+    public int getId() {
+        return id;
     }
 
-
-    public void setApellido(String ape) {
-        this.apellido = ape;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Equipo getEquipo() {
-        return equipo;
+    public String toString() {
+        return nombre;
     }
-
-
-    public void setApellido(Equipo e) {
-        this.equipo = e;
-    }
-
-
 }

@@ -32,13 +32,36 @@
             />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lPass"
+            android:text="@string/lcontrasena"
+            android:layout_marginRight="30dp"
+            android:textColor="@android:color/background_light"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCon"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@android:color/background_light"
+            android:text="              "
+            />
+
+    </LinearLayout>
 
 
     <Button
-        android:id="@+id/bcrearEquipo"
+        android:id="@+id/bcrearEntrenador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bcrear_equipo"
+        android:text="@string/bcrear_entrenador"
         android:textColor="@color/colorPrimaryDark" />
 
 </LinearLayout>

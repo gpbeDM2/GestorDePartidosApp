@@ -187,4 +187,160 @@ public class SQLiteBBDD extends Activity{
         }
         return false;
     }
+
+    public ArrayList<String> equipos(){
+        ArrayList<String> e = new ArrayList<>();
+        //Abrimos la base de datos 'gestor' en modo escritura
+        gest = new SQLiteHelper(this, "gestor", null, 1);
+
+        db = gest.getWritableDatabase();
+
+        //Si hemos abierto correctamente la base de datos
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT nombre FROM equipo", null);
+            if (c.moveToFirst()) {
+                //Recorremos el cursor hasta que no haya más registros
+                do {
+                    e.add(c.getString(0));
+                } while(c.moveToNext());
+            } else {
+                c.close();
+                return null;
+            }
+            c.close();
+        } else {
+            return null;
+        }
+        return e;
+    }
+
+    public boolean crearPartido(String equipo, String fecha) {
+        //Abrimos la base de datos 'gestor' en modo escritura
+        gest = new SQLiteHelper(this, "gestor", null, 1);
+
+        db = gest.getWritableDatabase();
+
+        //Si hemos abierto correctamente la base de datos
+        if (db != null) {
+            String s = "SELECT * FROM partido WHERE equipo = " + equipo + " AND fecha = " + fecha + ";";
+            db.rawQuery(s, null);
+            Cursor c = db.rawQuery(s,null);
+            if(c.moveToFirst()){
+                Toast.makeText(this, "El partido ya existe", Toast.LENGTH_SHORT).show();
+            } else {
+                s = "INSERT INTO partido (equipo, fecha) VALUES (" + equipo + "," + fecha +")";
+                db.rawQuery(s, null);
+
+                //Comprobamos la insercion.
+                s = "SELECT * FROM partido WHERE equipo = " + equipo + " AND fecha = " + fecha + ";";
+                Cursor c2 = db.rawQuery(s,null);
+                if(c.moveToFirst()){
+                    c.close();
+                    c2.close();
+                    return true;
+                } else {
+                    c.close();
+                    c2.close();
+                    return false;
+                }
+            }
+
+        }
+        return false;
+    }
+
+    public boolean crearEquipo(String nombre, int ent1, int ent2) {
+        //Abrimos la base de datos 'gestor' en modo escritura
+        gest = new SQLiteHelper(this, "gestor", null, 1);
+
+        db = gest.getWritableDatabase();
+
+        //Si hemos abierto correctamente la base de datos
+        if (db != null) {
+            String s = "SELECT * FROM equipo WHERE nombre = " + nombre + ";";
+            db.rawQuery(s, null);
+            Cursor c = db.rawQuery(s,null);
+            if(c.moveToFirst()){
+                Toast.makeText(this, "El equipo ya existe", Toast.LENGTH_SHORT).show();
+            } else {
+                s = "INSERT INTO equipo (nombre, entrenador1, entrenador2) VALUES (" + nombre + ",'" + ent1 + "','" + ent2 +"');";
+                db.rawQuery(s, null);
+
+                //Comprobamos la insercion.
+                s = "SELECT * FROM equipo WHERE nombre = " + nombre + ";";
+                Cursor c2 = db.rawQuery(s,null);
+                if(c.moveToFirst()){
+                    c.close();
+                    c2.close();
+                    return true;
+                } else {
+                    c.close();
+                    c2.close();
+                    return false;
+                }
+            }
+
+        }
+        return false;
+    }
+
+    public ArrayList<Entrenador> entrenadores() {
+        ArrayList<Entrenador> e = new ArrayList<Entrenador>();
+
+        //Abrimos la base de datos 'gestor' en modo escritura
+        gest = new SQLiteHelper(this, "gestor", null, 1);
+        db = gest.getWritableDatabase();
+
+        //Si hemos abierto correctamente la base de datos
+        if (db != null) {
+            Cursor c = db.rawQuery("SELECT nombre,id FROM entrenador", null);
+            if (c.moveToFirst()) {
+                //Recorremos el cursor hasta que no haya más registros
+                do {
+                    e.add(new Entrenador(c.getString(0),c.getInt(1)));
+                } while(c.moveToNext());
+            } else {
+                c.close();
+                return null;
+            }
+            c.close();
+        } else {
+            return null;
+        }
+        return e;
+    }
+
+    public boolean crearEntrenador(String nombre, String contrasena) {
+        //Abrimos la base de datos 'gestor' en modo escritura
+        gest = new SQLiteHelper(this, "gestor", null, 1);
+        db = gest.getWritableDatabase();
+
+        //Si hemos abierto correctamente la base de datos
+        if (db != null) {
+            String s = "SELECT * FROM entrenador WHERE nombre = " + nombre + ";";
+            db.rawQuery(s, null);
+            Cursor c = db.rawQuery(s,null);
+            if(c.moveToFirst()){
+                Toast.makeText(this, "El entrenador ya existe", Toast.LENGTH_SHORT).show();
+            } else {
+                s = "INSERT INTO entrenador (nombre, con_encrip) VALUES (" + nombre + "," + contrasena + ");";
+                db.rawQuery(s, null);
+
+                //Comprobamos la insercion.
+                s = "SELECT * FROM entrenador WHERE nombre = " + nombre + ";";
+                Cursor c2 = db.rawQuery(s,null);
+                if(c.moveToFirst()){
+                    c.close();
+                    c2.close();
+                    return true;
+                } else {
+                    c.close();
+                    c2.close();
+                    return false;
+                }
+            }
+
+        }
+        return false;
+    }
 }

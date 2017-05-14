@@ -57,16 +57,16 @@
     <string name="bcrearEquipo">Crear equipo</string>
     <string name="bcrearEntrenador">Crear entrenador</string>
 
-    <!-- MENU CREAR-->
+    <!-- MENU CREAR -->
     <string name="bcrear_partido">CREAR PARTIDO</string>
     <string name="bcrear_equipo">CREAR EQUIPO</string>
     <string name="bcrear_entrenador">CREAR ENTRENADOR</string>
 
-
-
-    <!-- CREAR EQUIPO-->
+    <!-- CREAR EQUIPO -->
     <string name="lprimerEntrenador">Entrenador 1:</string>
     <string name="lsegundoEntrenador">Entrenador 2:</string>
     <string name="lnombre">Nombre:</string>
+
+    <!-- CREAR ENTRENADOR -->
     <string name="lnombreApellido">Nombre y Apellido:</string>
 </resources>
