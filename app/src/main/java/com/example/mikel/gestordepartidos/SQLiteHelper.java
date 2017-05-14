@@ -8,30 +8,30 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class SQLiteHelper extends SQLiteOpenHelper {
     //Sentencia SQL para crear las tablas
     private String sqlCreateCo = "CREATE TABLE coordinador ("
-                    + "id int(4) primary key auto_increment, "
-                    + "nombre varchar(50) not null,"
-                    + "con_encrip varchar(80) not null,"
-                    + " tlf int(9))";
+                    + "id INT4 primary key AUTOINCREMENT, "
+                    + "nombre TEXT not null, "
+                    + "con_encrip TEXT not null, "
+                    + "tlf INT9)";
 
     private String sqlCreateEn  = "create table entrenador("
-                        + "id int(4) primary key auto_increment,"
-                        + "nombre varchar(50) not null,"
-                        + "con_encrip varchar(80) not null,"
-                        + "arbitraje int(2),"
-                        + "mesa	int(2),"
-                        + "tlf int(9));";
+                        + "id INT4 primary key AUTOINCREMENT, "
+                        + "nombre TEXT not null ,"
+                        + "con_encrip TEXT not null, "
+                        + "arbitraje INT2, "
+                        + "mesa	INT), "
+                        + "tlf INT9)";
 
     private String sqlCreatePa  = "create table partido("
-                        + "equipo varchar(50) not null,"
-                        + "fecha varchar(50),"
-                        + "arbitro int(4),"
-                        + "mesa int(4),"
+                        + "equipo TEXT not null,"
+                        + "fecha TEXT,"
+                        + "arbitro INT4,"
+                        + "mesa INT4,"
                         + "constraint PK_partido primary key (equipo,fecha))";
 
     private String sqlCreateEq  = "create table equipo("
-                        + "nombre varchar(50) not null primary key,"
-                        + "entrenador1 int(4) not null,"
-                        + "entrenador2 int(4) not null)";
+                        + "nombre TEXT not null primary key,"
+                        + "entrenador1 INT4 not null,"
+                        + "entrenador2 INT4 not null)";
 
     public SQLiteHelper(Context contexto, String nombre,
                         SQLiteDatabase.CursorFactory factory, int version) {
